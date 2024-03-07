@@ -29,13 +29,12 @@
     "node": ">=14.0.0"
   },
   "scripts": {
-    "_clean": "rm -rf mjs && rm -rf cjs",
-    "_set-version": "./set-version.sh $npm_package_version",
-    "_build:mjs": "tsc --declaration --project ./tsconfig.build.json && npm run _set-version mjs",
-    "_build:cjs": "tsc --target ES2019 --module CommonJS --outDir cjs --project ./tsconfig.build.json && npm run _set-version cjs",
-    "build": "npm run _clean && npm run _build:mjs && npm run _build:cjs",
-    "publish": "npm run build && npm publish",
-    "test": "jest --coverage",
+    "build:clean": "rm -rf mjs && rm -rf cjs",
+    "build:mjs": "tsc --declaration --project ./tsconfig.build.json",
+    "build:cjs": "tsc --module commonjs --outDir cjs --project ./tsconfig.build.json",
+    "build:lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "build": "npm run build:clean && npm run build:lint && npm run build:mjs && npm run build:cjs",
+    "test": "jest --coverage --no-cache",
     "lint": "tsc --noEmit && eslint src"
   },
   "keywords": [
