@@ -3,9 +3,9 @@ import {
   init as emailjsInit,
   send as emailjsSend,
   sendForm as emailjsSendForm,
+  EmailJSResponseStatus,
 } from '@emailjs/browser';
 import type { Options } from '@emailjs/browser/es/types/Options';
-import { EmailJSResponseStatus } from '@emailjs/browser/es/models/EmailJSResponseStatus';
 import { createReactNativeStorage } from './utils/createReactNativeStorage/createReactNativeStorage';
 import { createLocation } from './utils/createLocation/createLocation';
 
