@@ -9,7 +9,7 @@ Use you EmailJS account for sending emails.
 
 ## Disclaimer
 
-This is a NodeJS-only version, otherwise use
+This is a React Native version, otherwise use
 - [Browser SDK](https://www.npmjs.com/package/@emailjs/browser)
 - [Flutter SDK](https://pub.dev/packages/emailjs)
 - [Node.js SDK](https://pub.dev/packages/@emailjs/nodejs)
@@ -58,8 +58,8 @@ const templateParams = {
 };
 
 emailjs
-  .send('<YOUR_SERVICE_ID>', '<YOUR_TEMPLATE_ID>', templateParams, {
-    publicKey: '<YOUR_PUBLIC_KEY>',
+  .send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, {
+    publicKey: 'YOUR_PUBLIC_KEY',
   })
   .then(
     (response) => {
@@ -78,10 +78,10 @@ import emailjs from '@emailjs/react-native';
 
 // set Public Key as global settings
 emailjs.init({
-  publicKey: '<YOUR_PUBLIC_KEY>',
+  publicKey: 'YOUR_PUBLIC_KEY',
 });
 
-emailjs.send('<YOUR_SERVICE_ID>', '<YOUR_TEMPLATE_ID>').then(
+emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID').then(
   (response) => {
     console.log('SUCCESS!', response.status, response.text);
   },
@@ -98,11 +98,11 @@ import emailjs, { EmailJSResponseStatus } from '@emailjs/react-native';
 
 try {
   await emailjs.send(
-    '<YOUR_SERVICE_ID>',
-    '<YOUR_TEMPLATE_ID>',
+    'YOUR_SERVICE_ID',
+    'YOUR_TEMPLATE_ID',
     {},
     {
-      publicKey: '<YOUR_PUBLIC_KEY>',
+      publicKey: 'YOUR_PUBLIC_KEY',
     },
   );
   console.log('SUCCESS!');
@@ -129,8 +129,8 @@ var templateParams = {
 };
 
 emailjs
-  .send('<YOUR_SERVICE_ID>', '<YOUR_TEMPLATE_ID>', templateParams, {
-    publicKey: '<YOUR_PUBLIC_KEY>',
+  .send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, {
+    publicKey: 'YOUR_PUBLIC_KEY',
   })
   .then(
     function (response) {
