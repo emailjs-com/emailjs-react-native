@@ -1,11 +1,11 @@
 import {
-  type EmailJSResponseStatus,
   type StorageProvider,
   init as emailjsInit,
   send as emailjsSend,
   sendForm as emailjsSendForm,
 } from '@emailjs/browser';
 import type { Options } from '@emailjs/browser/es/types/Options';
+import { EmailJSResponseStatus } from '@emailjs/browser/es/models/EmailJSResponseStatus';
 import { createReactNativeStorage } from './utils/createReactNativeStorage/createReactNativeStorage';
 
 /**
@@ -63,12 +63,13 @@ const sendForm = async (
   });
 };
 
-export type { EmailJSResponseStatus, StorageProvider };
+export type { StorageProvider };
 
-export { init, send, sendForm };
+export { init, send, sendForm, EmailJSResponseStatus };
 
 export default {
   init,
   send,
   sendForm,
+  EmailJSResponseStatus,
 };
