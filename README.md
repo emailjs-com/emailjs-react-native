@@ -1,4 +1,4 @@
-# Official EmailJS SDK for Node.js
+# Official EmailJS SDK for React Native
 
 SDK for [EmailJS.com](https://www.emailjs.com) customers.
 \
