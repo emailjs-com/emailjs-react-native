@@ -9,7 +9,8 @@ Use you EmailJS account for sending emails.
 
 ## Disclaimer
 
-This is a React Native version, otherwise use
+This is the SDK for **React Native** only, otherwise use
+
 - [Browser SDK](https://www.npmjs.com/package/@emailjs/browser)
 - [Flutter SDK](https://pub.dev/packages/emailjs)
 - [Node.js SDK](https://pub.dev/packages/@emailjs/nodejs)
@@ -40,14 +41,16 @@ With Expo CLI:
 $ npx expo install @emailjs/react-native
 ```
 
-By default, the package uses `@react-native-async-storage/async-storage` for the storage.
+The package uses `@react-native-async-storage/async-storage` for the storage
+(for the rate limit feature)
 
-***Note***: By default, API requests are disabled for non-browser applications.
+**_Note_**: By default, API requests are disabled for non-browser applications.
 You need to activate them through [Account:Security](https://dashboard.emailjs.com/admin/account/security).
 
 ## FAQ
 
 #### API calls are disabled for non-browser applications
+
 You need to activate API requests
 through [Account:Security](https://dashboard.emailjs.com/admin/account/security).
 
