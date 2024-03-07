@@ -7,6 +7,7 @@ import {
 import type { Options } from '@emailjs/browser/es/types/Options';
 import { EmailJSResponseStatus } from '@emailjs/browser/es/models/EmailJSResponseStatus';
 import { createReactNativeStorage } from './utils/createReactNativeStorage/createReactNativeStorage';
+import { createLocation } from './utils/createLocation/createLocation';
 
 /**
  * EmailJS global SDK config
@@ -37,6 +38,8 @@ const send = async (
   templateParams?: Record<string, unknown>,
   options?: Options,
 ): Promise<EmailJSResponseStatus> => {
+  createLocation();
+
   return emailjsSend(serviceID, templateID, templateParams, {
     storageProvider: createReactNativeStorage(),
     ...options,
@@ -57,6 +60,8 @@ const sendForm = async (
   form: string | HTMLFormElement,
   options?: Options,
 ): Promise<EmailJSResponseStatus> => {
+  createLocation();
+
   return emailjsSendForm(serviceID, templateID, form, {
     storageProvider: createReactNativeStorage(),
     ...options,
