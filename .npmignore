@@ -14,10 +14,11 @@ Thumbs.db
 .eslintrc.js
 .gitignore
 .npmignore
-jest.config.ts
-set-version.sh
-set-type.sh
+
+babel.config.js
+jest.config.mjs 
 tsconfig.json
+tsconfig.build.json 
 
 # source code files
 src/
