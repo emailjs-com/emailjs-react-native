@@ -34,6 +34,14 @@ Install EmailJS SDK using [npm](https://www.npmjs.com/):
 $ npm install @emailjs/react-native
 ```
 
+With Expo CLI:
+
+```bash
+$ npx expo install @emailjs/react-native
+```
+
+By default, the package uses `@react-native-async-storage/async-storage` for the storage.
+
 ***Note***: By default, API requests are disabled for non-browser applications.
 You need to activate them through [Account:Security](https://dashboard.emailjs.com/admin/account/security).
 
