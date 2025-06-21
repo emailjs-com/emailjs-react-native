@@ -2,7 +2,6 @@ import {
   type StorageProvider,
   init as emailjsInit,
   send as emailjsSend,
-  sendForm as emailjsSendForm,
   EmailJSResponseStatus,
 } from '@emailjs/browser';
 import type { Options } from '@emailjs/browser/es/types/Options';
@@ -46,35 +45,12 @@ const send = async (
   });
 };
 
-/**
- * Send a form the specific EmailJS service
- * @param {string} serviceID - the EmailJS service ID
- * @param {string} templateID - the EmailJS template ID
- * @param {string | HTMLFormElement} form - the form element or selector
- * @param {object} options - the EmailJS SDK config options
- * @returns {Promise<EmailJSResponseStatus>}
- */
-const sendForm = async (
-  serviceID: string,
-  templateID: string,
-  form: string | HTMLFormElement,
-  options?: Options,
-): Promise<EmailJSResponseStatus> => {
-  createLocation();
-
-  return emailjsSendForm(serviceID, templateID, form, {
-    storageProvider: createReactNativeStorage(),
-    ...options,
-  });
-};
-
 export type { StorageProvider };
 
-export { init, send, sendForm, EmailJSResponseStatus };
+export { init, send, EmailJSResponseStatus };
 
 export default {
   init,
   send,
-  sendForm,
   EmailJSResponseStatus,
 };

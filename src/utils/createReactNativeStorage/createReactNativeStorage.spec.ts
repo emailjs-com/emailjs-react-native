@@ -1,4 +1,4 @@
-import { it, expect, beforeAll } from '@jest/globals';
+import { it, expect, beforeAll } from 'vitest';
 import type { StorageProvider } from '@emailjs/browser';
 import { createReactNativeStorage } from './createReactNativeStorage';
 
