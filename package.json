@@ -1,6 +1,6 @@
 {
   "name": "@emailjs/react-native",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "description": "EmailJS helps to send emails directly from your code. Official EmailJS SDK for React Native",
   "private": false,
   "author": "EmailJS",
