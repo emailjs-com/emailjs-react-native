@@ -1,6 +1,11 @@
 export const createLocation = () => {
-  // @ts-expect-error: allow non-read
-  window.location = window.location || {
-    pathname: 'default',
-  };
+  if (!global.window) {
+    global.window = {};
+  }
+
+  if (!global.window.location) {
+    global.window.location = {
+      pathname: 'default',
+    };
+  }
 };
