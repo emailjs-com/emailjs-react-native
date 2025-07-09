@@ -13,7 +13,7 @@ This is the SDK for **React Native** only, otherwise use
 
 - [Browser SDK](https://www.npmjs.com/package/@emailjs/browser)
 - [Flutter SDK](https://pub.dev/packages/emailjs)
-- [Node.js SDK](https://www.npmjs.com/packages/@emailjs/nodejs)
+- [Node.js SDK](https://www.npmjs.com/package/@emailjs/nodejs)
 - [REST API](https://www.emailjs.com/docs/rest-api/send/)
 
 ## Links
